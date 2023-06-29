@@ -26,6 +26,7 @@ public class TaskService
 	public Task addTask(Task task)
 	{
 		task.setTaskId(UUID.randomUUID().toString().split("-")[0]);
+		
 		Task addedTask = taskRepo.save(task);
 		log.info("Added new task successfully into collection: {}", addedTask);
 		
