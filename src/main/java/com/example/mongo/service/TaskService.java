@@ -26,10 +26,10 @@ public class TaskService
 	public Task addTask(Task task)
 	{
 		task.setTaskId(UUID.randomUUID().toString().split("-")[0]);
-		
+
 		Task addedTask = taskRepo.save(task);
 		log.info("Added new task successfully into collection: {}", addedTask);
-		
+
 		return addedTask;
 	}
 
@@ -72,7 +72,7 @@ public class TaskService
 	{
 		taskRepo.deleteById(taskId);
 		log.info("task deleted from collection is: {}", taskId);
-		
+
 		return taskId + " task deleted from dashboard";
 	}
 
