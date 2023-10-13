@@ -9,7 +9,6 @@ import com.example.mongo.model.Task;
 
 public interface TaskRepo extends MongoRepository<Task, String>
 {
-
 	List<Task> findBySeverity(int severity);
 
 	@Query("{assignee: ?0 }")
